@@ -1,9 +1,133 @@
-# Raspberry Pi Drive Sync
 
-Raspberry Pi Drive Sync is a personal application used to synchronize files between a private Raspberry Pi computer and the owner's Google Drive account.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal Raspberry Pi and Google Drive file synchronization.">
+  <title>Raspberry Pi Drive Sync</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0b1322;
+      color: #ecf3fa;
+      display: flex;
+      flex-direction: column;
+    }
+    header, footer, main {
+      width: min(100% - 40px, 760px);
+      margin-inline: auto;
+    }
+    header {
+      padding: 32px 0;
+      color: #9eb5c9;
+      font-weight: 600;
+    }
+    main {
+      flex: 1;
+      padding: 55px 0 80px;
+    }
+    .tag {
+      display: inline-block;
+      padding: 8px 13px;
+      border-radius: 20px;
+      background: #153c3d;
+      color: #65e0cb;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: clamp(36px, 7vw, 58px);
+      line-height: 1.1;
+      letter-spacing: -1.8px;
+      margin: 25px 0;
+    }
+    .lead {
+      color: #b5c6d7;
+      font-size: 19px;
+      line-height: 1.75;
+    }
+    .card {
+      background: #142238;
+      border: 1px solid #294058;
+      border-radius: 18px;
+      padding: 26px;
+      margin-top: 36px;
+    }
+    h2 { font-size: 21px; margin-top: 0; }
+    p { line-height: 1.75; }
+    .card p { color: #c1cedb; }
+    a { color: #65e0cb; }
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid #294058;
+      color: #92a8bd;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>Raspberry Pi Drive Sync</header>
 
-The application uses rclone and the Google Drive API to upload Garmin training reports, health-data exports, and related files to Google Drive.
+  <main>
+    <span class="tag">Personal-use application</span>
 
-This application is intended solely for the owner's personal use. It does not provide a public service or allow other users to register.
+    <h1>Simple, private file synchronization.</h1>
 
-[Privacy Policy](privacy.html)
+    <p class="lead">
+      Raspberry Pi Drive Sync is a personal application
+      that synchronizes files between a Raspberry Pi computer
+      and its owner's Google Drive account.
+    </p>
+
+    <section class="card">
+      <h2>What does it do?</h2>
+      <p>
+        The application uses rclone and the Google Drive API
+        to upload, download, and synchronize files belonging
+        to the account owner.
+      </p>
+      <p>
+        Its primary purpose is to maintain personal backups
+        and synchronize Garmin training reports and
+        health-data exports.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Who can use it?</h2>
+      <p>
+        This application is intended exclusively for
+        personal use by its owner. It is not offered as
+        a public service and does not provide public
+        user registration.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Privacy and security</h2>
+      <p>
+        Access to Google Drive requires authorization
+        through Google's OAuth system. Authentication
+        credentials are stored locally in the owner's
+        rclone configuration.
+      </p>
+      <p>
+        <a href="privacy.html">Read the Privacy Policy</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Raspberry Pi Drive Sync · Personal use only ·
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</body>
+</html>
